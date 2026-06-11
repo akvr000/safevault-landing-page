@@ -1,0 +1,98 @@
+import './Footer.css';
+function Footer() {
+    return (
+        <footer>
+            <div className='top-box box'>
+                <div className='info inner-box'>
+                    <div className='logo'>
+                        <svg
+                            width="35"
+                            height="35"
+                            viewBox="0 0 64 64"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <defs>
+                                <linearGradient
+                                    id="bgGradient"
+                                    x1="0%"
+                                    y1="0%"
+                                    x2="100%"
+                                    y2="100%"
+                                >
+                                    <stop offset="0%" stopColor="#9333EA" />
+                                    <stop offset="100%" stopColor="#3B82F6" />
+                                </linearGradient>
+                            </defs>
+
+                            <rect
+                                x="2"
+                                y="2"
+                                width="60"
+                                height="60"
+                                rx="18"
+                                fill="url(#bgGradient)"
+                            />
+
+                            <path
+                                d="M32 12C27.5 16 21.5 19 16 19V33C16 45 24.5 51 31.2 53.5C31.7 53.7 32.3 53.7 32.8 53.5C39.5 51 48 45 48 33V19C42.5 19 36.5 16 32 12Z"
+                                fill="none"
+                                stroke="white"
+                                strokeWidth="3"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                            />
+                        </svg>
+                        <span>SafeVault</span>
+                    </div>
+                    <p>Secure, non-custodial crypto wallet for the modern world. Your keys, your crypto.
+                    </p>
+                    <ul className='social-links'>
+                        <li><a href="/">Twitter</a></li>
+                        <li><a href="/">Discord</a></li>
+                        <li><a href="/">Github</a></li>
+                    </ul>
+                </div>
+                <div className='product inner-box'>
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="/">Features</a></li>
+                        <li><a href="/">Pricing</a></li>
+                        <li><a href="/">Security</a></li>
+                        <li><a href="/">Roadmap</a></li>
+                    </ul>
+
+                </div>
+                <div className='company inner-box'>
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/">About Us</a></li>
+                        <li><a href="/">Careers</a></li>
+                        <li><a href="/">Blog</a></li>
+                        <li><a href="/">Press</a></li>
+                    </ul>
+                </div>
+                <div className='legal inner-box'>
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/">Privacy Policy</a></li>
+                        <li><a href="/">Term of Service</a></li>
+                        <li><a href="/">Cookie Policy</a></li>
+                        <li><a href="/">Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div className="bottom-box box">
+                <div className='copyright'>
+                    <p>&copy; 2026 SafeVault. All rights reserved</p>
+                </div>
+                <div className='credit'>
+                    <p>Crafted with React • Made with ❤️ & lots of coffee ☕</p>
+                </div>
+                
+            </div>
+        </footer>
+
+    )
+}
+
+export default Footer;
