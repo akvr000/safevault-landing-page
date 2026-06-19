@@ -1,0 +1,266 @@
+.pricingSection{
+    padding: 4rem 1rem 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.8rem;
+    margin: 20px 20px 40px;
+}
+
+.title {
+    font-size: 2.2rem;
+    word-spacing: 2px;
+}
+
+.subtitle {
+    font-size: var(--fs-lg);
+    letter-spacing: 0.5px;
+}
+
+.heading .subtitle {
+    color: var(--text-color);
+
+}
+
+.highlight {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 600;
+}
+
+.toggle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    height: 50px;
+    border: none;
+    padding: 0.4rem;
+    width: 230px;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-sm);
+    gap: 0.2rem;
+}
+.btn{
+    border-radius: var(--radius-xl);
+    border: none;
+    background-color: white;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+.discount{
+    color: #05df72;
+}
+.btnPrimary{
+    padding: 0.7rem 1.4rem;
+    color: white;
+    background: var(--gradient-secondary);
+}
+.btnSecondary{
+    padding: 0.7rem 1rem;
+    display: flex;
+    gap: 0.5rem;
+    /* background: var(--gradient-secondary); */
+}
+
+/* .pricingContent1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 3rem 0rem;
+} */
+
+.pricingContent1 {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Forces equal height cards when side-by-side */
+    flex-wrap: wrap;       /* Allows wrapping to column on mobile */
+    gap: 1.5rem;          /* Uniform spacing around elements */
+    padding: 3rem 0rem;
+    width: 100%;
+    max-width: 1200px;    /* Prevents the cards from stretching infinitely on wide monitors */
+}
+/* .item{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1rem;
+    border: none;
+    flex: 1 1 390px;
+    width: 100%;
+
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    background-color: white;
+    transition: transform 300ms ease-in-out;
+} */
+
+.item {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem 2rem;
+    gap: 1rem;
+    border: none;
+    
+    /* Starts at 320px base, grows perfectly up to fill gaps */
+    flex: 1 1 320px; 
+    max-width: 390px; /* Keeps card widths neat on desktop */
+    
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    background-color: white;
+    transition: transform 300ms ease-in-out;
+}
+/* 
+.tag{
+    position: absolute;
+    width: 140px;
+    background-color: #fdc700;
+    color: #733e0a;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    border-radius: var(--radius-lg);
+    padding: 0.3rem 0.8rem;
+    top: -4%;
+    left: 33%;
+} */
+
+.tag {
+    position: absolute;
+    width: auto; /* Shrinks tightly around content */
+    white-space: nowrap;
+    background-color: #fdc700;
+    color: #733e0a;
+    font-weight: 700;
+    text-align: center;
+    border-radius: var(--radius-xl);
+    padding: 0.3rem 1rem;
+    
+    top: -16px; /* Positions badge cleanly cutting the top border line */
+    left: 50%;
+    transform: translateX(-50%); /* Mathematical alignment trick for absolute elements */
+}
+
+.itemDescription{
+    color: var(--text-color);
+}
+.itemPlan{
+    margin: 1.5rem 0rem 1.2rem;
+    color: var(--text-color);
+}
+.price{
+    font-size: var(--fs-3xl);
+    font-weight: 600;
+    color: var(--bg-secondary-dark);
+}
+.itemPlanFeatures{
+    list-style-position: inside;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+     flex-grow: 1; 
+}
+
+.itemPlanFeatures li {
+    display: flex;
+    align-items: center; /* Vertically centers the icon with the text */
+    color: var(--text-color);
+    word-spacing: 1.6px;
+    line-height: 1.8;
+    letter-spacing: 0.8px;
+    /* font-size: ; */
+}
+.itemPlanFeatures li::before {
+    content: "";
+    display: inline-block;
+    width: 20px;  
+    height: 20px; 
+    margin-right: 0.7rem;     
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.item:nth-child(odd) .itemPlanFeatures li::before{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%239810fa' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21.801 10A10 10 0 1 1 17 3.335'%3E%3C/path%3E%3Cpath d='m9 11 3 3L22 4'%3E%3C/path%3E%3C/svg%3E");
+}
+.item:nth-child(even) .itemPlanFeatures li::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21.801 10A10 10 0 1 1 17 3.335'%3E%3C/path%3E%3Cpath d='m9 11 3 3L22 4'%3E%3C/path%3E%3C/svg%3E");
+}
+
+/* .item:nth-child(odd){
+    max-height: 500px;
+} */
+ .item:nth-child(odd) {
+    /* Let content dictate heights naturally */
+}
+/* .item:nth-child(2){
+    position: relative;
+    background: var(--gradient-light);
+
+    color: white;
+    height: 510px;
+} */
+
+.item:nth-child(2) {
+    position: relative;
+    /* Apply your exact linear background color discovered earlier */
+    background: linear-gradient(135deg, #9333ea, #3b82f6); 
+    color: white;
+    transform: scale(1.03); /* Gives that popped-out feature appearance */
+    z-index: 1;
+}
+.item:nth-child(2)>.itemTitle,
+.item:nth-child(2)>.itemDescription,
+.item:nth-child(2)>.itemPlan,
+.item:nth-child(2)>.itemPlan>.price,
+.item:nth-child(2)>.itemPlanFeatures>li{
+    color: white;
+}
+
+
+.itemBtn{
+    /* font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+    padding: 0.9rem 1rem;
+    border: none;
+    border-radius: var(--radius-md);
+    /* font-weight: 600; */
+    /* margin: 1.3rem 0rem 1.2rem; */
+    color: var(--text-dark);
+    font-size: var(--fs-md);
+    cursor: pointer;
+    transition: background-color 300ms ease-in-out;
+}
+
+.btnPro{
+    color: #9810fa;
+    margin: 1.3rem 0rem 0rem;
+}
+.btnWhale{
+    background: var(--gradient-secondary);
+    color: white;
+}
+.btnBasic:hover{
+    background-color: rgb(229, 231, 235);
+}
+.btnPro:hover{
+    /* box-shadow: 0 5px 38px rgba(43, 128, 255, 0.402);
+     */
+     box-shadow: var(--shadow-md);
+}
+.btnWhale:hover{
+    box-shadow: var(--box-shadow);
+}

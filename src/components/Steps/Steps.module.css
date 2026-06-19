@@ -1,0 +1,89 @@
+.stepsSection {
+    padding: 4rem 1rem 5rem;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.8rem;
+    margin: 20px 20px 40px;
+}
+
+.title {
+    font-size: 2.2rem;
+    word-spacing: 2px;
+}
+
+.subtitle {
+    font-size: var(--fs-lg);
+    letter-spacing: 0.5px;
+}
+
+.heading .subtitle {
+    color: var(--text-color);
+
+}
+
+.highlight {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 600;
+}
+
+.stepsGrid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 0.6rem; */
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex: 1 1 400px;
+    padding: 1rem 0.7rem;
+    min-width: 320px;
+}
+
+.icon {
+    border: none;
+    border-radius: var(--radius-md);
+    color: white;
+    padding: 1.2rem;
+    width: 4.6rem;
+    height: 4.6rem;
+
+}
+
+.sheild {
+    background-color: var(--primary);
+
+}
+
+.bolt {
+    background-color: var(--secondary);
+}
+
+.uptrend {
+    background: var(--gradient-primary);
+}
+
+.itemLabel {
+    color: var(--primary-light-300);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+}
+
+.itemDescription {
+    color: var(--text-color);
+    text-align: center;
+    line-height: 1.5;
+    word-spacing: 1px;
+}

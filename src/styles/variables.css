@@ -4,12 +4,15 @@
 
   /* Brand */
   /* #8200db */
+  /* #9810fa */
   --primary: #7c3aed;
   --primary-light: #8b5cf6;
+  --primary-lighter: #9810fa;
   --primary-light-300:rgb(194, 122, 255);
   --primary-dark: #6d28d9;
   --color-purple-light: rgb(243, 232, 255);
   --color-purple-lighter : rgba(233,212,255,1);
+  --color-purple-600 : #9810fa;
   --color-purple-dark: #8200db;
 
   --secondary: #2563eb;
@@ -17,8 +20,8 @@
   --secondary-dark: #1d4ed8;
 
   /* Backgrounds */
-  --bg-primary: rgba(250, 245, 255, 1);
-  --bg-primary: rgba(248, 249, 251, 1);
+  --bg-primary: rgb(250, 245, 255);
+  --bg-secondary: rgba(248, 249, 251, 1);
   --bg-secondary-dark: rgba(16,24,40,1);
   /* --bg-secondary : rgba(254, 254, 255,1); */
   /* --bg-primary:#ffffff80; */
@@ -29,6 +32,7 @@
   /* Text */
   --text-primary: #ffffff;
   --text-secondary: #cbd5e1;
+  --text-light : #ffffffd6;
   --text-muted: rgb(106, 114, 130);
   --text-muted-light: rgba(153,161,175,1);
   --text-dark: #1e293b;
@@ -60,6 +64,15 @@
       #2b7fff  /* blue-500 */
     );
 
+    --gradient-secondary:
+    linear-gradient(
+      to right,
+      #9810faeb,
+      #2b80ff
+    );
+    
+  --gradient-light:
+ linear-gradient(135deg, #9333ea, #3b82f6);
   --gradient-dark:
     linear-gradient(
       135deg,
@@ -84,6 +97,7 @@
   --fs-lg: 1.125rem;
   --fs-xl: 1.5rem;
   --fs-2xl: 2rem;
+  --fs-mdxl :2.5rem;
   --fs-3xl: 3rem;
   --fs-4xl: 4rem;
 
@@ -109,6 +123,10 @@
   --box-shadow:
     0 5px 15px rgba(168, 85, 247, 0.5),
     0 5px 30px rgba(168, 85, 247, 0.3);
+
+    --box-shadow-light-glow:
+    0 0px 15px rgba(169, 85, 247, 0.121),
+    0 0px 32px rgba(169, 85, 247, 0.068);
 
   --shadow-sm:
     0 2px 8px rgba(0,0,0,0.1);

@@ -1,7 +1,6 @@
-header {
-    padding: 15px 30px;
+.header {
+    padding: 0.6rem 1.8rem;
     outline: 1px solid var(--outline-color);
-    /* background-color: var(--bg-secondary); */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -11,24 +10,20 @@ header {
 }
 
 .navbar {
-    max-width: 1200px;
     width: 100%;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
 }
 
-.logo-icon {
+.logoIcon {
     display: flex;
     align-items: center;
-    gap: 8px;
-    overflow: hidden;
-    /* font-size: var(--fs-sm); */
+    gap: 0.5rem;
 }
 
-.logo-text {
+.logoText {
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     background-clip: text;
@@ -37,20 +32,20 @@ header {
     font-size: var(--fs-lg);
 }
 
-.nav-links {
+.navLinks {
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 2.5rem;
 }
 
-.nav-links a {
+.navLinks a {
     text-decoration: none;
     color: var(--text-color);
     transition: all var(--transition-fast);
     cursor: pointer;
 }
-.nav-links a.active {
+.navLinks a.active {
     color: var(--primary);
 }
 
@@ -58,8 +53,8 @@ li>a:hover {
     color: var(--primary);
 }
 
-.sign-up-btn {
-    padding: 11px 24px;
+.signUpBtn {
+    padding: 0.8rem 1.8rem;
     color: var(--text-primary);
     background: var(--gradient-primary);
     font-weight: 600;
@@ -72,7 +67,7 @@ li>a:hover {
     box-shadow var(--transition-normal);
 }
 
-.sign-up-btn:hover {
+.signUpBtn:hover {
     box-shadow: var(--box-shadow);
     transform: translateY(-1px);
     box-shadow: var(--box-shadow);

@@ -5,3 +5,19 @@ body{
 html{
     scroll-behavior: smooth;
 }
+
+
+section{
+    padding: 1.8rem 2.5rem;
+}
+section:nth-child(odd){
+     /* background-color: var(--bg-primary); */
+     background-color: #f7f5ff;
+}
+section:nth-child(even){
+    background-color: #fbfaff;
+}
+a{
+    color: white;
+    text-decoration: none;
+}

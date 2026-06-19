@@ -1,10 +1,14 @@
-import './Footer.css';
+import styles from './Footer.module.css';
+// import Logo from '../Common/Logo';
+
 function Footer() {
     return (
-        <footer>
-            <div className='top-box box'>
-                <div className='info inner-box'>
-                    <div className='logo'>
+        <footer className={styles.footer}>
+            <div className={`${styles.topBox} ${styles.box}`}>
+                <div className={`${styles.info} ${styles.innerBox}`}>
+                    <div className={styles.logo}>
+                        {/* <Logo /> */}
+
                         <svg
                             width="35"
                             height="35"
@@ -42,27 +46,32 @@ function Footer() {
                                 strokeLinejoin="round"
                             />
                         </svg>
+
                         <span>SafeVault</span>
                     </div>
-                    <p>Secure, non-custodial crypto wallet for the modern world. Your keys, your crypto.
+                    <p>
+                        Secure, non-custodial crypto wallet for the modern world.
+                        Your keys, your crypto.
                     </p>
-                    <ul className='social-links'>
+
+                    <ul className={styles.socialLinks}>
                         <li><a href="/">Twitter</a></li>
                         <li><a href="/">Discord</a></li>
                         <li><a href="/">Github</a></li>
                     </ul>
                 </div>
-                <div className='product inner-box'>
+
+                <div className={`${styles.product} ${styles.innerBox}`}>
                     <h4>Product</h4>
                     <ul>
-                        <li><a href="/">Features</a></li>
-                        <li><a href="/">Pricing</a></li>
-                        <li><a href="/">Security</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#features">Security</a></li>
                         <li><a href="/">Roadmap</a></li>
                     </ul>
-
                 </div>
-                <div className='company inner-box'>
+
+                <div className={`${styles.company} ${styles.innerBox}`}>
                     <h4>Company</h4>
                     <ul>
                         <li><a href="/">About Us</a></li>
@@ -71,28 +80,29 @@ function Footer() {
                         <li><a href="/">Press</a></li>
                     </ul>
                 </div>
-                <div className='legal inner-box'>
+
+                <div className={`${styles.legal} ${styles.innerBox}`}>
                     <h4>Legal</h4>
                     <ul>
                         <li><a href="/">Privacy Policy</a></li>
-                        <li><a href="/">Term of Service</a></li>
+                        <li><a href="/">Terms of Service</a></li>
                         <li><a href="/">Cookie Policy</a></li>
                         <li><a href="/">Compliance</a></li>
                     </ul>
                 </div>
             </div>
-            <div className="bottom-box box">
-                <div className='copyright'>
-                    <p>&copy; 2026 SafeVault. All rights reserved</p>
+
+            <div className={`${styles.bottomBox} ${styles.box}`}>
+                <div className={styles.copyright}>
+                    <p>&copy; 2026 SafeVault. All rights reserved.</p>
                 </div>
-                <div className='credit'>
+
+                <div className={styles.credit}>
                     <p>Crafted with React • Made with ❤️ & lots of coffee ☕</p>
                 </div>
-                
             </div>
         </footer>
-
-    )
+    );
 }
 
 export default Footer;
