@@ -45,6 +45,7 @@
     transition: all var(--transition-fast);
     cursor: pointer;
 }
+
 .navLinks a.active {
     color: var(--primary);
 }
@@ -63,8 +64,8 @@ li>a:hover {
     border: none;
     cursor: pointer;
     transition:
-    transform var(--transition-normal),
-    box-shadow var(--transition-normal);
+        transform var(--transition-normal),
+        box-shadow var(--transition-normal);
 }
 
 .signUpBtn:hover {
@@ -93,19 +94,20 @@ li>a:hover {
     border: none;
     cursor: pointer;
     padding: 0;
-    z-index: 1001; 
+    z-index: 1001;
 }
 
 .hamburger .bar {
     width: 100%;
-    height: 2px;
+    height: 3px;
     background-color: var(--text-color);
     border-radius: 2px;
     transition: transform var(--transition-normal), opacity var(--transition-fast);
 }
 
 .signUpBtnMobile {
-    display: none; /* Hidden on desktop viewports */
+    display: none;
+    /* Hidden on desktop viewports */
 }
 
 /* ==========================================================================
@@ -117,7 +119,7 @@ li>a:hover {
     }
 
     .navLinks {
-        gap: 1.5rem; 
+        gap: 1.5rem;
     }
 }
 
@@ -130,38 +132,37 @@ li>a:hover {
     }
 
     .signUpBtn {
-        display: none; 
+        display: none;
     }
 
     .hamburger {
-        display: flex; 
+        display: flex;
     }
 
-    
-   .navLinks {
-    position: fixed;
-    top: 0;
-    right: 0; 
-    display: none; 
-    
-    width: 70%;  
-    height: 100vh;
-    background-color: rgba(255, 255, 255, 0.98); 
-    -webkit-backdrop-filter: blur(15px);
-    backdrop-filter: blur(15px);
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 6rem 2rem 2rem; 
-    gap: 2rem;
-    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.08);
 
-}
+    .navLinks {
+        position: fixed;
+        top: 0;
+        right: 0;
+        display: none;
+        width: 70%;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.98);
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 6rem 2rem 2rem;
+        gap: 2rem;
+        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.08);
+
+    }
 
 
-.navActive {
-    display: flex; 
-}
+    .navActive {
+        display: flex;
+    }
 
     .navLinks li {
         width: 100%;
@@ -196,13 +197,13 @@ li>a:hover {
         text-align: center;
     }
 
-    
+
     .hamburgerActive .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
 
     .hamburgerActive .bar:nth-child(2) {
-        opacity: 0; 
+        opacity: 0;
     }
 
     .hamburgerActive .bar:nth-child(3) {

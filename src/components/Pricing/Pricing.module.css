@@ -272,7 +272,7 @@
 
     .toggle {
         width: 100%; /* Toggle adjusts perfectly to ultra-thin viewports */
-        max-width: 230px;
+        max-width: 220px;
     }
 
     .itemPlanFeatures li {

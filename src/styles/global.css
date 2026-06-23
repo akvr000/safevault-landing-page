@@ -60,7 +60,7 @@ a{
     color: transparent;
     font-weight: 600;
 }
-@media(max-width:700px) {
+@media(max-width:768px) {
     .heading{
         gap: 0.8rem;
     }

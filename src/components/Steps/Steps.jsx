@@ -29,9 +29,9 @@ function Steps() {
     ];
     return (
         <section id="steps" className={styles.stepsSection}>
-            <div className={styles.heading}>
-                <h1 className={styles.title}>Up and Running in <span className={styles.highlight}>3 Simple Steps</span></h1>
-                <p className={styles.subtitle}>No complexity, no confusion — just security</p>
+            <div className="heading">
+                <h1 className="title">Up and Running in <span className="highlight">3 Simple Steps</span></h1>
+                <p className="subtitle">No complexity, no confusion — just security</p>
             </div>
 
             <div className={styles.stepsGrid}>

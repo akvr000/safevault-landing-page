@@ -102,6 +102,7 @@
     color: var(--primary-lighter);
     background-color: var(--bg-secondary);
     border: 2px solid var(--color-purple-lighter);
+    font-weight: 600;
     transition: border 300ms ease-out;
 }
 
@@ -143,6 +144,7 @@
     color: var(--text-muted);
     font-size: var(--fs-sm);
     letter-spacing: 0.03rem;
+    font-weight: 600;
 }
 
 /* Right Column Styles */
@@ -339,6 +341,7 @@
 @media (max-width: 768px) {
     .heroContainer {
         flex-direction: column; /* Stacks columns vertically */
+        align-items: center;
         text-align: center;
     }
 
@@ -348,7 +351,8 @@
     }
 
     .heroTitle {
-        font-size: var(--fs-3xl); /* Cleaner text wrapping */
+        font-size: var(--fs-4xl); /* Cleaner text wrapping */
+        font-weight: 700;
     }
 
     .heroButtons {
@@ -382,7 +386,7 @@
     }
 
     .heroTitle {
-        font-size: 2.1rem; /* Hardcoded safe fallback scale if --fs-3xl is too large */
+        font-size: 2.6rem; /* Hardcoded safe fallback scale if --fs-3xl is too large */
     }
 
     .heroDescription {
@@ -407,7 +411,7 @@
     }
 
     .statValue {
-        font-size: var(--fs-lg);
+        font-size: 1.2rem;
     }
 }
 
