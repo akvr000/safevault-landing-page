@@ -77,3 +77,69 @@ footer {
     display: flex;
     justify-content: space-between;
 }
+
+
+/* ==========================================================================
+   1. LAPTOPS & LARGE TABLETS BREAKPOINT (max-width: 1024px)
+   ========================================================================== */
+@media (max-width: 1024px) {
+    footer {
+        padding: 40px 32px 20px; /* Bring in side alignment margins to avoid edge clipping */
+    }
+
+    .topBox {
+        gap: 30px; /* Give breathing room to the footer columns as screen gets narrower */
+    }
+}
+
+/* ==========================================================================
+   2. SMALL TABLETS & LARGE PHONES BREAKPOINT (max-width: 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+    footer {
+        padding: 40px 24px 20px;
+    }
+
+    /* Convert flex to grid so the links don't stretch into one giant single row */
+    .topBox {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Neat 2-column layout on tablets */
+        gap: 32px;
+    }
+
+    /* Make your company branding description span across both columns at the top */
+    .info {
+        grid-column: span 2;
+        margin-bottom: 12px;
+    }
+}
+
+/* ==========================================================================
+   3. SMALL COMPACT SMARTPHONES (max-width: 480px)
+   ========================================================================== */
+@media (max-width: 480px) {
+    footer {
+        padding: 35px 16px 16px;
+        gap: 16px;
+    }
+
+    .topBox {
+        grid-template-columns: 1fr; /* True vertical stack fallback for small phone screens */
+        gap: 24px;
+    }
+
+    .info {
+        grid-column: span 1; /* Reset tracking restriction back to a single column block */
+    }
+
+    .bottomBox {
+        flex-direction: column; /* Stacks copyright row on top of craft credit row text */
+        text-align: center;
+        gap: 12px;
+        padding: 16px 0px;
+    }
+    
+    .socialLinks {
+        margin-top: 4px; /* Give social tags easy touch click room */
+    }
+}

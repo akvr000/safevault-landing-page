@@ -1,61 +1,98 @@
-import styles from './Pricing.module.css'
+import { useState } from 'react';
+import styles from './Pricing.module.css';
 
-function Pricing() {
+export default function Pricing() {
+    // 1. Establish state hook to track whether annual billing is active (true/false)
+    const [isAnnual, setIsAnnual] = useState(false);
+
+    // 2. Clear dataset array mapping holding both price variations
+    const pricingPlans = [
+        {
+            title: "Basic",
+            description: "Perfect for beginners",
+            monthlyPrice: 0,
+            annualPrice: 0,
+            features: ["Up to 3 wallets", "Basic security features", "Email support", "Mobile app access"],
+            btnText: "Get Started",
+            customClass: styles.basic,
+            btnClass: styles.btnBasic
+        },
+        {
+            title: "Pro",
+            description: "For serious traders",
+            monthlyPrice: 29,
+            annualPrice: 23, // Discounted monthly rate for annual plan
+            features: ["Unlimited wallets", "Advanced security suite", "Priority 24/7 support", "API access", "Portfolio analytics"],
+            btnText: "Start Free Trial",
+            isPopular: true,
+            customClass: styles.pro,
+            btnClass: styles.btnPro
+        },
+        {
+            title: "Whale 🐋",
+            description: "For institutions",
+            monthlyPrice: 199,
+            annualPrice: 159, // Discounted monthly rate for annual plan
+            features: ["Everything in Pro", "Dedicated account manager", "Custom integrations", "White-label option", "SLA guarantee"],
+            btnText: "Contact Sales",
+            customClass: styles.whale,
+            btnClass: styles.btnWhale
+        }
+    ];
+
     return (
         <section id="pricing" className={styles.pricingSection}>
-            <div className={styles.heading}>
-                <h1 className={styles.title}>Simple <span className={styles.highlight}>Transparent Pricing</span></h1>
-                <p className={styles.subtitle}>Choose the plan that fits your needs</p>
+            {/* FIXED: Scoped global header elements to CSS module mappings */}
+            <div className="heading">
+                <h1 className="title">Simple <span className="highlight">Transparent Pricing</span></h1>
+                <p className="subtitle">Choose the plan that fits your needs</p>
             </div>
-            <div className={styles.toggle}>
-                <button className={`${styles.btn} ${styles.btnPrimary}`}>Monthly</button>
-                <button className={`${styles.btn} ${styles.btnSecondary}`}>Annual <span className={styles.discount}>−20%</span></button>
-            </div>
-            <div className={styles.pricingContent1}>
-                <div className={`${styles.item} ${styles.basic}`}>
-                    <h2 className={styles.itemTitle}>Basic</h2>
-                    <p className={styles.itemDescription}>Perfect for beginners</p>
-                    <p className={styles.itemPlan}><span className={styles.price}>$0</span>/month</p>
-                    <ul className={styles.itemPlanFeatures}>
-                        <li>Up to 3 wallets</li>
-                        <li>Basic security features
-                        </li>
-                        <li>Email support</li>
-                        <li>Mobile app access</li>
-                    </ul>
-                    <button className={`${styles.itemBtn} ${styles.btnBasic}`} >Get Started</button>
-                </div>
-                <div className={`${styles.item} ${styles.pro}`}>
-                    <div className={styles.tag}>Most Popular</div>
-                    <h2 className={styles.itemTitle}>Pro</h2>
-                    <p className={styles.itemDescription}>For serious traders</p>
-                    <p className={styles.itemPlan}><span className={styles.price}>$29</span>/month</p>
-                    <ul className={styles.itemPlanFeatures}>
-                        <li>Unlimited wallets</li>
-                        <li>Advanced security suite</li>
-                        <li>Priority 24/7 support</li>
-                        <li>API access</li>
-                        <li>Portfolio analytics</li>
-                    </ul>
-                    <button className={`${styles.itemBtn} ${styles.btnPro}`} >Start Free Trial</button>
-                </div>
-                <div className={`${styles.item} ${styles.whale}`}>
 
-                    <h2 className={styles.itemTitle}>Whale 🐋</h2>
-                    <p className={styles.itemDescription}>For For institutions</p>
-                    <p className={styles.itemPlan}><span className={styles.price}>$199</span>/month</p>
-                    <ul className={styles.itemPlanFeatures}>
-                        <li>Everything in Pro</li>
-                        <li>Dedicated account manager</li>
-                        <li>Custom integrations</li>
-                        <li>White-label option</li>
-                        <li>SLA guarantee</li>
-                    </ul>
-                    <button className={`${styles.itemBtn} ${styles.btnWhale}`} >Contact Sales</button>
-                </div>
+            {/* 3. Interactive State Buttons */}
+            <div className={styles.toggle}>
+                <button
+                    className={`${styles.btn} ${!isAnnual ? styles.active : ''}`}
+                    onClick={() => setIsAnnual(false)}
+                >
+                    Monthly
+                </button>
+                <button
+                    className={`${styles.btn} ${isAnnual ? styles.active : ''}`}
+                    onClick={() => setIsAnnual(true)}
+                >
+                    Annual <span className={styles.discount}>−20%</span>
+                </button>
+            </div>
+
+            {/* 4. Display Pricing Content */}
+            <div className={styles.pricingContent1}>
+                {pricingPlans.map((plan, index) => (
+                    <div key={index} className={`${styles.item} ${plan.customClass}`}>
+                        {plan.isPopular && <div className={styles.tag}>Most Popular</div>}
+
+                        <h2 className={styles.itemTitle}>{plan.title}</h2>
+                        <p className={styles.itemDescription}>{plan.description}</p>
+
+                        {/* Dynamic evaluation based on state condition */}
+                        <p className={styles.itemPlan}>
+                            <span className={styles.price}>
+                                ${isAnnual ? plan.annualPrice : plan.monthlyPrice}
+                            </span>
+                            {isAnnual ? '/month (billed annually)' : '/month'}
+                        </p>
+
+                        <ul className={styles.itemPlanFeatures}>
+                            {plan.features.map((feature, idx) => (
+                                <li key={idx}>{feature}</li>
+                            ))}
+                        </ul>
+
+                        <button className={`${styles.itemBtn} ${plan.btnClass}`}>
+                            {plan.btnText}
+                        </button>
+                    </div>
+                ))}
             </div>
         </section>
-    )
+    );
 }
-
-export default Pricing;

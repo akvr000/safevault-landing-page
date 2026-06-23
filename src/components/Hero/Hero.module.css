@@ -1,26 +1,29 @@
 /* Hero Section Styles */
 .heroSection {
-    /* display: flex;
+    display: flex;
     justify-content: center;
-    align-items: center; */
+    align-items: center;
     min-height: 100vh;
 }
 
-.heroContainer{
+.heroContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
     max-width: 1200px;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
 }
+
 /* Left Column Styles */
 .leftColumn {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items:flex-start;
+    align-items: flex-start;
     gap: 1.3rem;
-    /* flex: 1 1 50%; */
     flex: 1;
 }
 
@@ -119,7 +122,7 @@
     line-height: 1.4;
     padding: 0.7rem 0.25rem;
     gap: 0.7rem;
-    
+
 }
 
 .statValue {
@@ -185,7 +188,7 @@
 }
 
 
-/* 1. Purple Lock Icon (Top Left Layer) */
+
 .lockIcon {
     background: linear-gradient(135deg, #a855f7, #9333ea);
     color: white;
@@ -198,7 +201,7 @@
 
 }
 
-/* 2. Blue Shield Icon (Bottom Right Layer) */
+
 .shieldIcon {
     background: linear-gradient(135deg, #3b82f6, #1d4ed8);
     color: white;
@@ -211,7 +214,7 @@
     animation: shieldIcon 6s ease-in-out infinite;
 }
 
-/* 3. Gradient Bolt Icon (Floating Overlapped Layer) */
+
 .boltIcon {
     background: linear-gradient(135deg, #c084fc, #60a5fa);
     color: white;
@@ -300,3 +303,113 @@
         background: linear-gradient(135deg, rgba(192, 132, 252, 0.756), rgba(128, 170, 221, 0.756));
     }
 }
+
+
+/* ==========================================================================
+   1. LAPTOPS & TABLETS BREAKPOINT (max-width: 1024px)
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .heroSection {
+        min-height: auto;
+        padding: 100px 32px 60px 32px; /* Adds space for fixed headers */
+    }
+
+    .heroContainer {
+        gap: 2rem;
+    }
+
+    .rightColumn {
+        margin-left: 0; /* Remove the massive desktop left margin shift */
+    }
+
+    .glassPanel {
+        width: 360px; /* Scale down the decorative panel slightly */
+        height: 340px;
+    }
+
+    /* Scaling floating icon bounds gracefully for medium layouts */
+    .lockIcon { width: 90px; height: 90px; }
+    .shieldIcon { width: 80px; height: 80px; }
+    .boltIcon { width: 65px; height: 65px; }
+}
+
+/* ==========================================================================
+   2. SMALL TABLETS & PHONES BREAKPOINT (max-width: 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .heroContainer {
+        flex-direction: column; /* Stacks columns vertically */
+        text-align: center;
+    }
+
+    .leftColumn {
+        align-items: center; /* Center buttons and titles */
+        width: 100%;
+    }
+
+    .heroTitle {
+        font-size: var(--fs-3xl); /* Cleaner text wrapping */
+    }
+
+    .heroButtons {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .heroStats {
+        justify-content: center;
+        flex-wrap: wrap; /* Allows stats columns to wrap if needed */
+        margin-bottom: 1.5rem;
+    }
+
+    .badge {
+        margin: 1rem 0 0 0; /* Removes excessive desktop top margin spacing */
+    }
+
+    /* Hiding the complex floating panel block on portrait screens 
+       prevents layout blowouts and keeps focus purely on the conversion actions */
+    .rightColumn {
+        display: none; 
+    }
+}
+
+/* ==========================================================================
+   3. SMALL COMPACT SMARTPHONES (max-width: 480px)
+   ========================================================================== */
+@media (max-width: 480px) {
+    .heroSection {
+        padding: 80px 16px 40px 16px;
+    }
+
+    .heroTitle {
+        font-size: 2.1rem; /* Hardcoded safe fallback scale if --fs-3xl is too large */
+    }
+
+    .heroDescription {
+        font-size: 1rem;
+    }
+
+    .heroButtons {
+        flex-direction: column; /* Stack primary and secondary buttons vertically */
+        gap: 12px;
+    }
+
+    /* Turn actions into easy-to-tap full-width buttons for touch screens */
+    .btnPrimary,
+    .btnSecondary {
+        width: 100%;
+        padding: 1rem;
+        justify-content: center;
+    }
+
+    .heroStats {
+        gap: 0.8rem;
+    }
+
+    .statValue {
+        font-size: var(--fs-lg);
+    }
+}
+
+
+

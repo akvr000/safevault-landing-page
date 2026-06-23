@@ -1,4 +1,5 @@
-import styles from './Testimonial.module.css'; // Styling file
+import styles from './Testimonial.module.css'; 
+
 
 // 1. The data from image_0a352c.png is kept safely inside this component file
 const testimonialsData = [
@@ -54,21 +55,22 @@ function TestimonialCard({ initials, name, role, text, avatarBg }) {
 function Testimonial() {
     return (
         <section className={styles.testimonialsSection}>
-            <div className={styles.heading}>
-                <h1 className={styles.title}>Loved by <span className={styles.highlight}>Thousands</span></h1>
-                <p className={styles.subtitle}>Don't take our word for it</p>
+            <div className="heading">
+                <h1 className="title">Loved by <span className="highlight">Thousands</span></h1>
+                <p className="subtitle">Don't take our word for it</p>
             </div>
 
             <div className={styles.testimonialGrid}>
                 {testimonialsData.map((item) => (
-                    <TestimonialCard
-                        key={item.id}
-                        initials={item.initials}
-                        name={item.name}
-                        role={item.role}
-                        text={item.text}
-                        avatarBg={item.avatarBg}
-                    />
+                    // <TestimonialCard
+                    //     key={item.id}
+                    //     initials={item.initials}
+                    //     name={item.name}
+                    //     role={item.role}
+                    //     text={item.text}
+                    //     avatarBg={item.avatarBg}
+                    // />
+                    <TestimonialCard key={item.id} {...item} />
                 ))}
             </div>
         </section>

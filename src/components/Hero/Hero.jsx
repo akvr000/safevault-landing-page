@@ -4,10 +4,19 @@ import LockIcon from '../Common/LockIcon';
 import ShieldIcon from '../Common/ShieldIcon';
 import BoltIcon from '../Common/BoltIcon';
 
-function Hero() {
+export default function Hero() {
+    // Array of stats data to map through dynamically
+    const statsData = [
+        { value: '500K+', label: 'Active Users' },
+        { value: '$2B+', label: 'Assets Secured' },
+        { value: '99.9%', label: 'Uptime' }
+    ];
+
     return (
         <section className={styles.heroSection}>
             <div className={styles.heroContainer}>
+                
+                {/* Left Column: Content and Metrics */}
                 <div className={styles.leftColumn}>
                     <div className={styles.badge}>
                         <span>🚀 The Future of Crypto Security</span>
@@ -27,35 +36,30 @@ function Hero() {
                         </p>
                     </div>
 
+                    {/* FIXED: Replaced standard button nested in anchor with an anchor styled as a button */}
                     <div className={styles.heroButtons}>
-                        <a href="#pricing" rel="noopener noreferrer"><button className={styles.btnPrimary}>
+                        <a href="#pricing" className={styles.btnPrimary}>
                             Start Free Trial
                             <ArrowIcon />
-                        </button></a>
+                        </a>
 
                         <button className={styles.btnSecondary}>
                             Watch Demo
                         </button>
                     </div>
 
+                    {/* OPTIMIZED: Clean mapping for stats layout */}
                     <div className={styles.heroStats}>
-                        <div className={styles.statItem}>
-                            <p className={styles.statValue}>500K+</p>
-                            <p className={styles.statLabel}>Active Users</p>
-                        </div>
-
-                        <div className={styles.statItem}>
-                            <p className={styles.statValue}>$2B+</p>
-                            <p className={styles.statLabel}>Assets Secured</p>
-                        </div>
-
-                        <div className={styles.statItem}>
-                            <p className={styles.statValue}>99.9%</p>
-                            <p className={styles.statLabel}>Uptime</p>
-                        </div>
+                        {statsData.map((stat, index) => (
+                            <div key={index} className={styles.statItem}>
+                                <p className={styles.statValue}>{stat.value}</p>
+                                <p className={styles.statLabel}>{stat.label}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
 
+                {/* Right Column: Visual Dashboard/Glassmorphism element */}
                 <div className={styles.rightColumn}>
                     <div className={styles.heroVisual}>
                         <div className={styles.glassPanel}>
@@ -75,9 +79,8 @@ function Hero() {
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
     );
 }
-
-export default Hero;

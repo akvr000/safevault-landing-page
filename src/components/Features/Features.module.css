@@ -2,42 +2,11 @@
     padding: 4rem 2rem 5rem;
 }
 
-.heading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 1.8rem;
-    margin: 20px 20px 40px;
-}
-
-.title {
-    font-size: 2.2rem;
-    word-spacing: 2px;
-}
-
-.subtitle {
-    font-size: var(--fs-lg);
-    letter-spacing: 0.5px;
-}
-
-.heading .subtitle {
-    color: var(--text-color);
-
-}
-
-.highlight {
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    font-weight: 600;
-}
-
 .featuresGrid{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 2rem;
 }
 .item{
@@ -46,8 +15,8 @@
     padding: 2rem;
     gap: 1.6rem;
     border: none;
-    flex: 1 1 400px;
-    min-width: 320px;
+    flex: 1 1 350px;
+    max-width: 400px;
     min-height: 390px;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-sm);
@@ -140,4 +109,75 @@
 .item:nth-child(even) .itemFeaturesList li::before {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%230052FF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21.801 10A10 10 0 1 1 17 3.335'%3E%3C/path%3E%3Cpath d='m9 11 3 3L22 4'%3E%3C/path%3E%3C/svg%3E");
 }
-/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg> */
+
+
+/* ==========================================================================
+   1. LAPTOPS & LARGE TABLETS BREAKPOINT (max-width: 1024px)
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .featuresSection {
+        padding: 3.5rem 1.5rem 4rem; /* Gently scale down large desktop padding */
+    }
+
+    .featuresGrid {
+        gap: 1.5rem; /* Squeeze cards slightly closer to fit nicely */
+    }
+
+    .item {
+        /* Allow cards to take up a bit more proportional space on medium tablets */
+        flex: 1 1 300px; 
+        min-height: auto; /* Let content dictate height naturally */
+    }
+}
+
+/* ==========================================================================
+   2. SMALL TABLETS & LARGE PHONES BREAKPOINT (max-width: 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .featuresSection {
+        padding: 3rem 1rem 3.5rem;
+    }
+
+    /* On touch screens, heavy hover animations can feel glitchy when scrolling.
+       We remove the translateY lift to make the mobile scroll feel perfectly smooth. */
+    .item:hover {
+        transform: none;
+    }
+
+    .item {
+        padding: 1.5rem; /* Give text content more edge space */
+        gap: 1.2rem;
+        max-width: 100%; /* Allow cards to span cleanly across full width if stacked */
+    }
+}
+
+/* ==========================================================================
+   3. SMALL COMPACT SMARTPHONES (max-width: 480px)
+   ========================================================================== */
+@media (max-width: 480px) {
+    .featuresSection {
+        padding: 2.5rem 0.75rem 3rem;
+    }
+
+    .featuresGrid {
+        gap: 1.2rem;
+    }
+
+    .item {
+        padding: 1.25rem;
+    }
+
+    .itemTitle {
+        font-size: 1.25rem;
+    }
+
+    .itemDescription {
+        font-size: 0.85rem;
+        letter-spacing: 0.4px; /* Slightly tighten text tracking so it reads better on thin displays */
+    }
+
+    .itemFeaturesList li {
+        font-size: 0.85rem;
+        letter-spacing: 0.4px;
+    }
+}
