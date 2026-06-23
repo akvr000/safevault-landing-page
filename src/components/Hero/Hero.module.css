@@ -35,7 +35,7 @@
     font-size: var(--fs-sm);
     font-weight: 600;
     border-radius: var(--radius-lg);
-    margin: 3rem 0rem 0.8rem;
+    margin: 5.4rem 0rem 0.8rem;
 }
 
 /* Hero Title Styles */
@@ -48,6 +48,7 @@
 .heroTitle {
     font-size: var(--fs-4xl);
     line-height: 1.2;
+    font-weight: 600;
     letter-spacing: 0.04rem;
 }
 
