@@ -126,7 +126,7 @@
     .item {
         /* Allow cards to take up a bit more proportional space on medium tablets */
         flex: 1 1 300px; 
-        min-height: auto; /* Let content dictate height naturally */
+        
     }
 }
 

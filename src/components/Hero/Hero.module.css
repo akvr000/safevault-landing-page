@@ -310,7 +310,6 @@
    ========================================================================== */
 @media (max-width: 1024px) {
     .heroSection {
-        min-height: auto;
         padding: 100px 32px 60px 32px; /* Adds space for fixed headers */
     }
 
