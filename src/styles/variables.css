@@ -68,14 +68,6 @@
 
   /* ===== TYPOGRAPHY ===== */
 
-  --font-primary:
-    "Inter",
-    sans-serif;
-
-  --font-heading:
-    "Poppins",
-    sans-serif;
-
   /* Font Sizes */
   --fs-xs: 0.75rem;
   --fs-sm: 0.875rem;

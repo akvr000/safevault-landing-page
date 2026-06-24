@@ -62,6 +62,7 @@ a{
 }
 button, a {
     -webkit-tap-highlight-color: transparent;
+    font-weight: 400;
 }
 
 /* NEW: Remove active/focus state colors from buttons */

@@ -1,0 +1,53 @@
+/* Container and animation keyframes remain exactly the same as before */
+.logoSlider {
+  overflow: hidden;
+  padding: 20px 0;
+  background: var(--bg-secondary); /* Light background to make text pop */
+  white-space: nowrap;
+  position: relative;
+  border: none;
+  outline: 1px solid rgba(233, 233, 233, 0.87);
+}
+.heading{
+  text-align: center;
+  margin: 0rem 0rem 1.2rem;
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+
+.logoTrack {
+  display: inline-block;
+  animation: scroll 27s linear infinite;
+}
+
+/* New styling specifically for the text items */
+.companyName {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-muted-light); /* Sleek slate gray */
+  margin: 0 40px; /* Generous spacing between names */
+  letter-spacing: -0.03em;
+  vertical-align: middle;
+}
+.companyName:hover{
+  color: var(--primary-lighter);
+  cursor: default;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.logoSlider:hover .logoTrack {
+  animation-play-state: paused;
+}
+
+@media (max-width: 768px) {
+
+  .companyName{
+    margin: 0 30px;
+    font-size: var(--fs-md);
+  }
+}

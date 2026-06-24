@@ -3,14 +3,12 @@ import styles from "./Navbar.module.css";
 import Logo from '../Common/Logo';
 
 function Navbar() {
-  // State to track if the mobile menu drawer is open or closed
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(prevState => !prevState);
   };
 
-  // Close menu automatically when a link is clicked (great for smooth-scrolling anchors)
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
@@ -25,8 +23,6 @@ function Navbar() {
           <span className={styles.logoText}>SafeVault</span>
         </div>
 
-        {/* Dynamic Navigation Links Block 
-            We use template literals to apply the active mobile styling state conditionally */}
         <ul className={`${styles.navLinks} ${isMenuOpen ? styles.navActive : ""}`}>
           <li>
             <a href="#features" onClick={closeMenu}>Features</a>

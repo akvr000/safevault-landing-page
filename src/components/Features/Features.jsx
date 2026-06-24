@@ -1,4 +1,5 @@
 import styles from './Features.module.css';
+
 function Features() {
 
     const featuresData = [
@@ -43,6 +44,9 @@ function Features() {
     return (
 
         <section id='features' className={styles.featuresSection}>
+            <div>
+                {/* <LogoSlider/> */}
+            </div>
             <div className="heading">
                 <h1 className="title">Why Choose <span className="highlight">SafeVault</span></h1>
                 <p className="subtitle">Everything you need for secure crypto management</p>

@@ -165,14 +165,19 @@
     cursor: pointer;
     transition: background-color 300ms ease-in-out;
 }
+.btnBasic{
+    font-weight: 500;
+}
 
 .btnPro{
     color: #9810fa;
     margin: 1.3rem 0rem 0rem;
+    font-weight: 500;
 }
 .btnWhale{
     background: var(--gradient-secondary);
     color: white;
+    font-weight: 500;
 }
 .btnBasic:hover{
     background-color: rgb(229, 231, 235);
