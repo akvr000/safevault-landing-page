@@ -22,7 +22,18 @@
     box-shadow: var(--shadow-sm);
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
+     -webkit-tap-highlight-color: transparent;
 }
+
+
+.faqItem:active,
+.faqItem:focus,
+.faqItem:focus-visible {
+    outline: none;
+    background-color: transparent;
+    box-shadow: none;
+}
+
 
 
 .faqItem:hover {
@@ -36,28 +47,10 @@
     align-items: center;
     padding: 0px 10px;
     font-weight: 500;
-    /* outline: none;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-focus-ring-color: transparent; */
     -webkit-user-select: none; 
     user-select: none; 
-        /* Nuclear options */
-    /* outline: none !important;
-    border: none !important;
-    background-color: transparent !important;
-    box-shadow: none !important;
-    -webkit-tap-highlight-color: transparent !important;
-    -webkit-focus-ring-color: transparent !important; */
 }
 
-/* .faqQuestion:focus,
-.faqQuestion:active,
-.faqQuestion:focus-visible {
-    outline: none !important;
-    background-color: transparent !important;
-    box-shadow: none !important;
-    border: none !important;
-} */
 
 
 .faqAnswer {
