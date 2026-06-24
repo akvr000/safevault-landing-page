@@ -77,7 +77,7 @@
     background-color: rgba(255, 255, 255, 0.32);
 }
 
-@media (max-width:700px) {
+@media (max-width:768px) {
 
     .joinUsGrid {
         padding: 0.8rem;
@@ -85,8 +85,8 @@
 
     .container {
         flex: 1 1 100%;
-        padding: 2rem 1rem;
-        margin: 4rem 0.3rem;
+        padding: 2rem 0.4rem;
+        margin: 4rem 1rem;
     }
 
     .title {
@@ -95,13 +95,27 @@
 
     .buttons {
         display: flex;
-        flex-direction: column;
+        /* flex-direction: column; */
         gap: 1rem;
         margin: 0;
     }
 
     .btnPrimary,
     .btnSecondary {
+        margin: 0;
+    }
+}
+
+@media (max-width: 480px) {
+        .container {
+        flex: 1 1 100%;
+        padding: 2rem;
+        margin: 4rem 1rem;
+    }
+        .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
         margin: 0;
     }
 }

@@ -60,6 +60,24 @@ a{
     color: transparent;
     font-weight: 600;
 }
+button, a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* NEW: Remove active/focus state colors from buttons */
+button:active,
+button:focus,
+button:focus-visible {
+    outline: none;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+/* Optional: If you want a custom focus outline for accessibility */
+button:focus-visible {
+    outline: 2px solid var(--primary-color, #c17aff);
+    outline-offset: 2px;
+}
 @media(max-width:768px) {
     .heading{
         gap: 0.8rem;

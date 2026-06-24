@@ -16,7 +16,9 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    flex: 1 1 400px;
+    flex: 1 1 350px;
+    max-width: 480px;
+    width: 100%;
     padding: 1rem 0.7rem;
     min-width: 320px;
 }
@@ -44,10 +46,11 @@
     background: var(--gradient-primary);
 }
 
+
 .itemLabel {
     color: var(--primary-light-300);
     font-size: var(--fs-sm);
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .itemDescription {

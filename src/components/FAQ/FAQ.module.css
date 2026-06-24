@@ -21,7 +21,7 @@
     line-height: 1.8;
     box-shadow: var(--shadow-sm);
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease-in-out;
 }
 
 
@@ -36,9 +36,28 @@
     align-items: center;
     padding: 0px 10px;
     font-weight: 500;
-    -webkit-user-select: none;
+    /* outline: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-focus-ring-color: transparent; */
+    -webkit-user-select: none; 
     user-select: none; 
+        /* Nuclear options */
+    /* outline: none !important;
+    border: none !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-focus-ring-color: transparent !important; */
 }
+
+/* .faqQuestion:focus,
+.faqQuestion:active,
+.faqQuestion:focus-visible {
+    outline: none !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+} */
 
 
 .faqAnswer {
@@ -65,7 +84,7 @@
     }
 
     .faqItem {
-        padding: 14px 18px; /* Tighter padding borders inside grid list cards */
+        padding: 14px 18px; 
     }
 }
 
@@ -78,12 +97,12 @@
     }
 
     .faqItem {
-        margin: 10px 0px; /* Clear out side margins so cards use full component width */
+        margin: 10px 0px; 
         padding: 12px 16px;
     }
     
     .faqQuestion h3 {
-        font-size: 1.1rem; /* Prevent queries from text-breaking jaggedly on medium grids */
+        font-size: 1.1rem; 
     }
 }
 
@@ -96,12 +115,12 @@
     }
 
     .faqContainer {
-        min-width: 100%; /* Ensure container takes absolute fluid space */
+        min-width: 100%; 
     }
 
     .faqItem {
         padding: 12px 10px;
-        line-height: 1.6; /* Adjust line-height ratio dynamically for high-density screens */
+        line-height: 1.6; 
     }
 
     .faqQuestion {

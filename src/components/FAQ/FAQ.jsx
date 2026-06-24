@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from './FAQ.module.css';
 
-// Your beautiful custom arrow component
+
 function Arrow({ isOpen }) {
     return (
         <svg
@@ -23,7 +23,7 @@ function Arrow({ isOpen }) {
     );
 }
 
-// Separate component for clean styling and state mapping
+
 function FAQItem({ question, answer, isOpen, onToggle }) {
     return (
         <div className={`${styles.faqItem} ${isOpen ? styles.open : ''}`}>
@@ -33,7 +33,6 @@ function FAQItem({ question, answer, isOpen, onToggle }) {
                 <Arrow isOpen={isOpen} />
             </div>
 
-            {/* Smooth conditional expansion zone */}
             {isOpen && (
                 <div className={styles.faqAnswer}>
                     <p>{answer}</p>
@@ -44,7 +43,7 @@ function FAQItem({ question, answer, isOpen, onToggle }) {
 }
 
 export default function FAQ() {
-    // Tracks the index/ID of the open item. Defaults to null (all closed)
+
     const [openIndex, setOpenIndex] = useState(null);
 
     const faqData = [
@@ -70,7 +69,7 @@ export default function FAQ() {
         }
     ];
 
-    // Toggle logic: If clicked item is already open, close it (null). Otherwise, open it.
+    
     const handleToggle = (index) => {
         setOpenIndex(openIndex === index ? null : index);
     };
@@ -78,7 +77,7 @@ export default function FAQ() {
     return (
         <section id="faq" className={styles.faqGrid}>
             <div className={styles.faqContainer}>
-                {/* Scoped header elements properly to CSS modules */}
+                
                 <div className="heading">
                     <h1 className="title">Frequently Asked <span className="highlight">Questions</span></h1>
                     <p className="subtitle">Everything you need to know about SafeVault</p>

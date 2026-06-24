@@ -84,11 +84,11 @@ footer {
    ========================================================================== */
 @media (max-width: 1024px) {
     footer {
-        padding: 40px 32px 20px; /* Bring in side alignment margins to avoid edge clipping */
+        padding: 40px 32px 20px; 
     }
 
     .topBox {
-        gap: 30px; /* Give breathing room to the footer columns as screen gets narrower */
+        gap: 30px; 
     }
 }
 
@@ -100,14 +100,14 @@ footer {
         padding: 40px 24px 20px;
     }
 
-    /* Convert flex to grid so the links don't stretch into one giant single row */
+    
     .topBox {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Neat 2-column layout on tablets */
+        grid-template-columns: repeat(2, 1fr); 
         gap: 32px;
     }
 
-    /* Make your company branding description span across both columns at the top */
+   
     .info {
         grid-column: span 2;
         margin-bottom: 12px;
@@ -124,22 +124,22 @@ footer {
     }
 
     .topBox {
-        grid-template-columns: 1fr; /* True vertical stack fallback for small phone screens */
+        grid-template-columns: 1fr; 
         gap: 24px;
     }
 
     .info {
-        grid-column: span 1; /* Reset tracking restriction back to a single column block */
+        grid-column: span 1; 
     }
 
     .bottomBox {
-        flex-direction: column; /* Stacks copyright row on top of craft credit row text */
+        flex-direction: column; 
         text-align: center;
         gap: 12px;
-        padding: 16px 0px;
+        padding: 16px 5px;
     }
     
     .socialLinks {
-        margin-top: 4px; /* Give social tags easy touch click room */
+        margin-top: 4px;
     }
 }

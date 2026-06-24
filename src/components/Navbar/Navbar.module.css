@@ -207,7 +207,7 @@ li>a:hover {
     }
 
     .hamburgerActive .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-7px) rotate(-45deg);
     }
 }
 

@@ -35,7 +35,7 @@
     font-size: var(--fs-sm);
     font-weight: 600;
     border-radius: var(--radius-lg);
-    margin: 5.4rem 0rem 0.8rem;
+    margin: 3.8rem 0rem 0.8rem;
 }
 
 /* Hero Title Styles */
@@ -228,7 +228,7 @@
     z-index: 12;
     transition: all 0.3s ease-in-out;
     animation: boltIcon 6s ease-in-out infinite;
-    /* Sits perfectly on top of the shield */
+    
 }
 
 /* Floating Animation */
@@ -313,7 +313,7 @@
    ========================================================================== */
 @media (max-width: 1024px) {
     .heroSection {
-        padding: 100px 32px 60px 32px; /* Adds space for fixed headers */
+        padding: 100px 32px 60px 32px; 
     }
 
     .heroContainer {
@@ -321,11 +321,11 @@
     }
 
     .rightColumn {
-        margin-left: 0; /* Remove the massive desktop left margin shift */
+        margin-left: 0;
     }
 
     .glassPanel {
-        width: 360px; /* Scale down the decorative panel slightly */
+        width: 360px; 
         height: 340px;
     }
 
@@ -340,18 +340,18 @@
    ========================================================================== */
 @media (max-width: 768px) {
     .heroContainer {
-        flex-direction: column; /* Stacks columns vertically */
+        flex-direction: column; 
         align-items: center;
         text-align: center;
     }
 
     .leftColumn {
-        align-items: center; /* Center buttons and titles */
+        align-items: center; 
         width: 100%;
     }
 
     .heroTitle {
-        font-size: var(--fs-4xl); /* Cleaner text wrapping */
+        font-size: var(--fs-4xl);
         font-weight: 700;
     }
 
@@ -362,16 +362,15 @@
 
     .heroStats {
         justify-content: center;
-        flex-wrap: wrap; /* Allows stats columns to wrap if needed */
+        flex-wrap: wrap; 
         margin-bottom: 1.5rem;
     }
 
     .badge {
-        margin: 1rem 0 0 0; /* Removes excessive desktop top margin spacing */
+        margin: 0.8rem 0 0 0; 
     }
 
-    /* Hiding the complex floating panel block on portrait screens 
-       prevents layout blowouts and keeps focus purely on the conversion actions */
+    
     .rightColumn {
         display: none; 
     }
@@ -386,7 +385,7 @@
     }
 
     .heroTitle {
-        font-size: 2.6rem; /* Hardcoded safe fallback scale if --fs-3xl is too large */
+        font-size: 2.6rem; 
     }
 
     .heroDescription {
@@ -394,15 +393,16 @@
     }
 
     .heroButtons {
-        flex-direction: column; /* Stack primary and secondary buttons vertically */
+        flex-direction: column;
         gap: 12px;
     }
 
-    /* Turn actions into easy-to-tap full-width buttons for touch screens */
+    
     .btnPrimary,
     .btnSecondary {
         width: 100%;
         padding: 1rem;
+        font-weight: 600;
         justify-content: center;
     }
 

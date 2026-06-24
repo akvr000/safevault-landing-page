@@ -9,6 +9,8 @@
 
 .testimonialGrid{
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 2rem;
   flex-wrap: wrap;
 
@@ -17,8 +19,8 @@
   display: flex;
   gap: 1rem;
   flex-direction: column;
-  flex: 1 1 340px;
-  min-width: 320px;
+  flex: 1 1 350px;
+  max-width: 380px;
   width: 100%;
   padding: 2rem 1.8rem;
   border: none;
@@ -65,16 +67,16 @@
    ========================================================================= */
 @media (max-width: 1024px) {
   .testimonialsSection {
-    padding: 3.5rem 1.5rem 4rem; /* Match universal section container spacing */
+    padding: 3.5rem 1.5rem 4rem; 
   }
 
   .testimonialGrid {
-    gap: 1.5rem; /* Squeeze grid gutters slightly closer */
+    gap: 1.5rem; 
   }
 
   .testimonialCard {
-    padding: 1.8rem 1.5rem; /* Compact card margins slightly */
-    flex: 1 1 300px; /* Allow cards to wrap more dynamically */
+    padding: 1.8rem 1.5rem; 
+    flex: 1 1 300px; 
   }
 }
 
@@ -87,15 +89,14 @@
     gap: 0.8rem;
   }
 
-  /* Disabling hover transformations handles touch-scrolling perfectly,
-     stopping layout shifts when a mobile user drags across cards. */
+/* 
   .testimonialCard:hover {
     transform: none;
-    box-shadow: var(--shadow-md); /* Keep regular clean desktop shadow layout */
-  }
+    box-shadow: var(--shadow-md); 
+  } */
 
   .testimonialCard {
-    max-width: 100%; /* Ensure stacked card units fill the full width profile */
+    max-width: 100%; 
   }
 }
 
@@ -104,20 +105,19 @@
    ========================================================================= */
 @media (max-width: 480px) {
   .testimonialsSection {
-    padding: 2.5rem 0.5rem 3rem;
+    padding: 2.5rem 1rem 3rem;
   }
 
   .testimonialGrid {
-    gap: 1.2rem; /* Bring stacked blocks slightly closer together */
+    gap: 1.2rem; 
   }
-
   .testimonialCard {
-    padding: 1.4rem 1.2rem; /* Save precious side margins for internal copy width */
-    min-width: 100%; /* Overrides desktop layout definitions for safe rendering */
+    padding: 1.4rem 1.2rem; 
+    min-width: 100%; 
   }
 
   .reviewText {
-    font-size: 0.95rem; /* Improve overall tracking legibility */
+    font-size: 0.95rem; 
     line-height: 1.45;
   }
 
@@ -126,6 +126,6 @@
   }
 
   .avatar {
-    padding: 0.65rem; /* Slightly compact the circular background wrapper */
+    padding: 0.65rem; 
   }
 }
